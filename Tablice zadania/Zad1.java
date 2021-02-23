@@ -1,31 +1,24 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Zad1 {
-    public static void main(String[]args) throws IOException {
+    public static void main(String[]args) throws FileNotFoundException {
         Random nfr = new Random();
-        File nffile = new File("Uczniowie.txt");
-        Scanner nfsc = new Scanner(nffile);
-
+        FileReader fr = new FileReader("src\\Uczniowie.txt");
+        Scanner nfsc = new Scanner(fr);
 
         String tabucniowie[] = new String[10];
+        int tabocena[] = new int [10];
         for(int a=0;a<tabucniowie.length;a++){
-
-        }
-
-
-        int tabocena[] = new int [6];
-        for (int i=0;i<tabocena.length;i++){
+            while(nfsc.hasNext()){
+                tabucniowie[a] = nfsc.nextLine();
+                }
+            }
+        for (int i=0;i<tabucniowie.length;i++){
             tabocena[i]= nfr.nextInt(6)+1;
-            System.out.println(tabocena[i]);
         }
-
-
-
-
-
     }
 }
+
