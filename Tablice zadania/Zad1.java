@@ -11,14 +11,15 @@ public class Zad1 {
 
         String tabucniowie[] = new String[10];
         int tabocena[] = new int [10];
-        for(int a=0;a<tabucniowie.length;a++){
-            while(nfsc.hasNext()){
-                tabucniowie[a] = nfsc.nextLine();
-                }
-            }
+
         for (int i=0;i<tabucniowie.length;i++){
             tabocena[i]= nfr.nextInt(6)+1;
         }
+        for(int i=0;i<10;i++){
+            tabucniowie[i] = nfsc.nextLine();
+            System.out.println(i+ 1 +  "  -  " + tabucniowie[i] + "  :  "+ tabocena[i]);
+        }
+
     }
 }
 
