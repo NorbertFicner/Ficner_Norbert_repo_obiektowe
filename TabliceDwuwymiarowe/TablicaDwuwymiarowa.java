@@ -6,7 +6,12 @@ public class TablicaDwuwymiarowa {
         // wyskoczy error W int nie moze byc string
         for(int i=0;i<tab.length;i++){
             System.out.println(tab[i]);
+
+            tab2dFirst();
         }
+    }
+
+    private static void tab2dFirst(){
         System.out.println("===Deklaracja i dlugosc tablicy===");
         int[][] tab2d =  new int[5][2];
         tab2d[0][0] = 20;
@@ -17,11 +22,12 @@ public class TablicaDwuwymiarowa {
         System.out.println(tab2d.length*tab2d[0].length); // ile elementow ma tablica w ogóle
         System.out.println("==Wyswietlanie tablicy dwuwymiarowej===");
         for (int i =0; i<tab2d.length; i++){
-           for(int j =0; j<tab2d[i].length;j++){
-               System.out.println(tab2d[i][j]);
-           }
+            for(int j =0; j<tab2d[i].length;j++){
+                System.out.println(tab2d[i][j]);
+            }
             System.out.println("Koniec petli w petli ze zmienna j");
         }
         System.out.println("Koniec petli w petli ze zmienna i");
     }
+
 }
