@@ -1,14 +1,7 @@
 public class TablicaDwuwymiarowa {
     public static void main(String[]args){
-        int[] tab = new int[5];
-        tab[0] = 40;
-        //tab[1] = "Jeden";
-        // wyskoczy error W int nie moze byc string
-        for(int i=0;i<tab.length;i++){
-            System.out.println(tab[i]);
-
-            tab2dFirst();
-        }
+       // tablicajendowymiarowa();
+        tab2dFirst();
     }
 
     private static void tab2dFirst(){
@@ -28,6 +21,16 @@ public class TablicaDwuwymiarowa {
             System.out.println("Koniec petli w petli ze zmienna j");
         }
         System.out.println("Koniec petli w petli ze zmienna i");
+    }
+    private static void tablicajendowymiarowa(){
+        int[] tab = new int[5];
+        tab[0] = 40;
+        //tab[1] = "Jeden";
+        // wyskoczy error W int nie moze byc string
+        for(int i=0;i<tab.length;i++){
+            System.out.println(tab[i]);
+
+        }
     }
 
 }
