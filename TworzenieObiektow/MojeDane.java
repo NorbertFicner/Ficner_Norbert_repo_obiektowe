@@ -1,10 +1,12 @@
  class MojeDane {
-    /*
-    public String imie = "Norbert";
-    public String nazwisko = "Ficner";
-    public String klasa = "2PTN";
-  */
+
+    public String imie = "";
+    public String nazwisko = "";
+    public String klasa = "";
+
     public MojeDane(String imie,String nazwisko, String klasa){
-        System.out.println(imie + "\n" + nazwisko + "\n" + klasa);
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.klasa = klasa;
     }
 }
