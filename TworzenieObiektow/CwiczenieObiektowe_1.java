@@ -1,0 +1,4 @@
+
+class CwiczenieObiektowe_1 {
+
+}
