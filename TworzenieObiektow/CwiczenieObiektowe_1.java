@@ -4,6 +4,10 @@ class CwiczenieObiektowe_1 {
         System.out.println("Zad1");
         MojeDane md = new MojeDane("Norbert","Ficner","2PTN");
         System.out.println("Zad2");
+        Logowanie log = new Logowanie("akronim", "532adw");
+        System.out.println(log.toString());
+        System.out.println("Zad3");
+
     }
 
 }
