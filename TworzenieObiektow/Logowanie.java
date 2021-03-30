@@ -1,4 +1,4 @@
-public class Logowanie {
+class Logowanie {
     private String login ="";
     private String haslo ="";
 
@@ -6,7 +6,6 @@ public class Logowanie {
         this.login = login;
         this.haslo = haslo;
     }
-
     @Override
     public String toString(){
         return "Login: " + login +" "+ "Haslo: " + haslo;
