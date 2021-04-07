@@ -29,7 +29,7 @@ class NazwiskoImie {
             else if(tab1[i] < tab2[i]){
                 znak = " < ";
             }
-            else if(tab1[i] == tab2[i]){
+            else if(tab1[i] > tab2[i]){
                 znak = " > ";
             }
             System.out.println(tab1[i] + znak +  tab2[i]);
