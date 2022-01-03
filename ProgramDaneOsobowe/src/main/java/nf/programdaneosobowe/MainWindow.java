@@ -5,6 +5,8 @@
  */
 package nf.programdaneosobowe;
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -27,6 +29,46 @@ public class MainWindow extends javax.swing.JFrame {
      */
     public MainWindow() {
         initComponents();
+        addMouseListener(new MouseAdapter() {
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                showPopup(e);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                showPopup(e);
+            }
+
+            private void showPopup(MouseEvent e) {
+                if (e.isPopupTrigger()) {
+                    jPopupMenu.show(e.getComponent(),
+                            e.getX(), e.getY());
+                }
+            }
+        });
+        
+        jList1.addMouseListener(new MouseAdapter() {
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                showPopup(e);
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                showPopup(e);
+            }
+
+            private void showPopup(MouseEvent e) {
+                if (e.isPopupTrigger()) {
+                    jPopupMenu.show(e.getComponent(),
+                            e.getX(), e.getY());
+                }
+            }
+        });
+
     }
 
     /**
@@ -38,10 +80,19 @@ public class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu = new javax.swing.JPopupMenu();
+        jMenuItemDelete = new javax.swing.JMenuItem();
+        jMenuItemEdit = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jButtonAddDates = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
+
+        jMenuItemDelete.setText("Delete");
+        jPopupMenu.add(jMenuItemDelete);
+
+        jMenuItemEdit.setText("Edit");
+        jPopupMenu.add(jMenuItemEdit);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,7 +155,9 @@ public class MainWindow extends javax.swing.JFrame {
         }
         adt = null;
     }//GEN-LAST:event_jButtonAddDatesActionPerformed
-
+        
+        
+        
     /**
      * @param args the command line arguments
      */
@@ -143,7 +196,10 @@ public class MainWindow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAddDates;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JMenuItem jMenuItemDelete;
+    private javax.swing.JMenuItem jMenuItemEdit;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

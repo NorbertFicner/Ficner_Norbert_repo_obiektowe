@@ -21,7 +21,7 @@ public class SaveToFile {
         FileWriter fw = new FileWriter(f);
         for(int i=0;i<list.size();i++){
             Data data = list.get(i);
-            fw.write(data.toString());
+            fw.write(data.toString() + "\n");
         }
         fw.close();
         
