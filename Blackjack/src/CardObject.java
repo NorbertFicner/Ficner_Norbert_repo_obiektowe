@@ -6,4 +6,12 @@ public class CardObject {
         this.name = name;
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return "CardObject{" +
+                "name='" + name + '\'' +
+                ", value=" + value +
+                '}';
+    }
 }
