@@ -17,6 +17,9 @@ public class ShowInformationToPlayer {
     public void defaultInSwitch(){
         System.out.println("Nie ma takiej opcji");
     }
+    public void incorrectMove(){
+        System.out.println("Nie możesz wykonać tego ruchu");
+    }
 
 
 }

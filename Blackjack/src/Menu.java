@@ -15,6 +15,7 @@ public class Menu {
                 case "1":
                     gameLogic.initGame();
                     break;
+
                 case "2":
                     on = false;
                     break;
