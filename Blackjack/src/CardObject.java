@@ -7,11 +7,12 @@ public class CardObject {
         this.value = value;
     }
 
+    public int getValue() {
+        return value;
+    }
+
     @Override
     public String toString() {
-        return "CardObject{" +
-                "name='" + name + '\'' +
-                ", value=" + value +
-                '}';
+        return  name + " " + value;
     }
 }

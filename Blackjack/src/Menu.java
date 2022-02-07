@@ -3,14 +3,13 @@ import java.util.Scanner;
 
 public class Menu {
     GameLogic gameLogic = new GameLogic();
+    ShowInformationToPlayer showInformationToPlayer = new ShowInformationToPlayer();
     public void initMenu(){
         Scanner sc = new Scanner(System.in);
         boolean on = true;
 
         while (on){
-            System.out.println("Podaj opcje, którą chcesz wybrać:\n" +
-                    "1 - Rozpocznij grę \n"+
-                    "2 - Wyjdz");
+            showInformationToPlayer.showMenu();
             String option = sc.nextLine();
             switch (option){
                 case "1":
@@ -20,7 +19,7 @@ public class Menu {
                     on = false;
                     break;
                 default:
-                    System.out.println("Nie ma takiej opcji");
+                    showInformationToPlayer.defaultInSwitch();
             }
         }
     }
